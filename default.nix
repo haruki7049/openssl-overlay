@@ -17,6 +17,10 @@ self: super: {
         ./config --prefix=$out
         make
       '';
+
+      installPhase = ''
+        make install
+      '';
     };
   };
 }
